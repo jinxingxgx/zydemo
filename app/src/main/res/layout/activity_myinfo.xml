@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.wuhenzhizao.titlebar.widget.CommonTitleBar
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:centerText="个人资料"
+        app:centerTextColor="@color/white"
+        app:centerType="textView"
+        app:fillStatusBar="true"
+        app:leftDrawable="@drawable/back_white"
+        app:leftDrawablePadding="0dp"
+        app:leftTextColor="@color/white"
+        app:leftType="textView"
+        app:statusBarColor="@color/colorPrimary"
+        app:statusBarMode="light"
+        app:titleBarColor="@color/colorPrimary" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/my_icon_stv"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:sLeftTextString="头像"
+                app:sRightIconHeight="50dp"
+                app:sRightIconRes="@drawable/user_unlogin"
+                app:sRightIconShowCircle="true"
+                app:sRightIconWidth="50dp" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/my_username_stv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_list_height"
+                app:sLeftTextString="用户名"
+                app:sRightIconRes="@drawable/next_item" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/my_realname_stv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_list_height"
+                app:sLeftTextString="真实姓名"
+                app:sRightIconRes="@drawable/next_item" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/my_birthday_stv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_list_height"
+                app:sLeftTextString="生日"
+                app:sRightIconRes="@drawable/next_item" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/my_email_stv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_list_height"
+                app:sLeftTextString="电子邮件"
+                app:sRightIconRes="@drawable/next_item" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/my_tel_stv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_list_height"
+                app:sLeftTextString="电话"
+                app:sRightIconRes="@drawable/next_item" />
+
+
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/password_stv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_list_height"
+                app:sLeftTextString="修改密码"
+                app:sRightIconRes="@drawable/next_item" />
+
+            <com.allen.library.SuperButton
+                android:id="@+id/sb_create"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="@dimen/dp_10"
+                android:layout_marginTop="20dp"
+                android:background="@color/red"
+                android:text="退出"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                app:sCornersRadius="15dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

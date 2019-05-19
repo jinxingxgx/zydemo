@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/sfv_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <SurfaceView
+        android:id="@+id/sfv_face"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <ImageView
+        android:id="@+id/testImageView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/align_mode"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RadioGroup
+        android:id="@+id/align_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="2">
+
+        <RadioButton
+            android:id="@+id/detect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="检测" />
+
+        <RadioButton
+            android:id="@+id/align"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="聚焦" />
+
+        <Button
+            android:id="@+id/button_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="从相册选择"
+            android:visibility="gone" />
+
+
+    </RadioGroup>
+
+    <com.allen.library.SuperButton
+        android:id="@+id/button_take_photos"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:text="拍照"
+        android:textColor="@color/white"
+        app:sShapeType="oval"
+        app:sSolidColor="@color/sGradientCenterColor"
+        app:sStrokeColor="@color/white"
+        app:sStrokeWidth="1dp" />
+
+
+    <ImageView
+        android:id="@+id/imageView_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitStart"
+        android:visibility="gone" />
+</RelativeLayout>

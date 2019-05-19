@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.wuhenzhizao.titlebar.widget.CommonTitleBar
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:centerText="请假"
+        app:centerTextColor="@color/white"
+        app:centerType="textView"
+        app:fillStatusBar="true"
+        app:leftDrawable="@drawable/back_white"
+        app:leftDrawablePadding="0dp"
+        app:leftTextColor="@color/white"
+        app:leftType="textView"
+        app:statusBarColor="@color/colorPrimary"
+        app:statusBarMode="light"
+        app:titleBarColor="@color/colorPrimary"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请假标题"
+            android:textColor="@color/black_de"
+            android:textSize="16sp"></TextView>
+
+        <com.xw.repo.XEditText
+            android:id="@+id/et_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="@null"
+            android:hint="请输入请假标题"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="@dimen/sp_14"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line"/>
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/select_starttime_stv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:sLeftTextString="选择开始时间"
+        app:sRightIconRes="@drawable/next_item"/>
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/select_endtime_stv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:sLeftTextString="选择结束时间"
+        app:sRightIconRes="@drawable/next_item"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请假原因"
+            android:textColor="@color/black_de"
+            android:textSize="16sp"></TextView>
+
+        <com.xw.repo.XEditText
+            android:id="@+id/et_detial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="@null"
+            android:hint="请输入请假原因"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="@dimen/sp_14"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line"/>
+
+
+    <com.allen.library.SuperButton
+        android:id="@+id/sb_create"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="@dimen/dp_10"
+        android:layout_marginTop="20dp"
+        android:text="创建"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14"
+        app:sCornersRadius="15dp"
+        app:sGradientCenterColor="@color/sGradientCenterColor"
+        app:sGradientEndColor="@color/sGradientEndColor"
+        app:sGradientOrientation="LEFT_RIGHT"
+        app:sGradientStartColor="@color/sGradientStartColor"
+        app:sSelectorPressedColor="@color/sGradientEndColor"
+        app:sUseSelector="true"/>
+</LinearLayout>
